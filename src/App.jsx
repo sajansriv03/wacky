@@ -60,10 +60,6 @@ const normalizeCollection = (collection) => (
 const RED_WORKER_IMAGE = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CradialGradient id='g' cx='35%25' cy='30%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%23ff6961'/%3E%3Cstop offset='70%25' stop-color='%23d10f0f'/%3E%3Cstop offset='100%25' stop-color='%23a00000'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='url(%23g)'/%3E%3Cellipse cx='40' cy='36' rx='12' ry='8' fill='%23ffb3ac' opacity='0.5'/%3E%3C/svg%3E";
 IMAGES.worker = RED_WORKER_IMAGE;
 
-const normalizeCollection = (collection) => (
-  Array.isArray(collection) ? collection.filter(Boolean) : Object.values(collection || {}).filter(Boolean)
-);
-
 export default function App() {
   const [roomId, setRoomId] = useState('');
   const [playerId, setPlayerId] = useState('');
